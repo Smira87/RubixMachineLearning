@@ -16,10 +16,10 @@ while not pr.window_should_close():
     pr.begin_drawing()
     pr.clear_background(pr.RAYWHITE)
 
-    position = pr.Vector3(piece.center[0], piece.center[1], piece.center[2] )
-    pr.draw_model(piece.model, position, 2, piece.face_color)
     pr.begin_mode_3d(configs.camera)
     pr.draw_grid(20, 1.0)
+    position = pr.Vector3(piece.center[0], piece.center[1], piece.center[2])
+    pr.draw_model(piece.model, position, 2, piece.face_color)
     pr.end_mode_3d()
 
     pr.end_drawing()
