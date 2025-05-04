@@ -25,8 +25,8 @@ class Rubik:
     def generate_rubik(self, size):
         colors = [pr.WHITE, pr.BLUE, pr.RED, pr.GREEN, pr.YELLOW, pr.ORANGE]
         offset = size - 0.7
-        size_x = 0.1, size * 0.9, size * 0.1
-        side_y = 0.9, size * 0.1, size * 0.9
+        size_x = size * 0.1, size * 0.9, size * 0.1
+        side_y = size * 0.9, size * 0.1, size * 0.9
         size_z = size * 0.9, size * 0.9, size * 0.1
 
         for x in range(3):
@@ -40,17 +40,17 @@ class Rubik:
                         pr.BLACK if z != 0 else colors[4],
                         pr.BLACK if z != 2 else colors[5],
                     ]
-                # Center
-                center_position = np.array([(x - 1) * offset,
+                    # Center
+                    center_position = np.array([(x - 1) * offset,
                                             (y - 1) * offset,
                                             (z - 1) * offset])
 
-                center = Cube(size, size, size), center_position, pr.BLACK
+                    center = Cube(size, size, size), center_position, pr.BLACK
 
-                # Front face
+                    # Front face
 
-                front_position = np.array([center_position[0],
+                    front_position = np.array([center_position[0],
                                           center_position[1],
                                           center_position[2] + size/2])
 
-                front = Cube(size_z, front_position, face_colors[0])
+                    front = Cube(size_z, front_position, face_colors[0])
