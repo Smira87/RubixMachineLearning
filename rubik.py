@@ -26,7 +26,7 @@ class Rubik:
     def generate_rubik(self, size):
         colors = [pr.WHITE, pr.BLUE, pr.RED, pr.GREEN, pr.YELLOW, pr.ORANGE]
         offset = size - 0.7
-        size_x = size * 0.1, size * 0.9, size * 0.1
+        size_x = size * 0.1, size * 0.9, size * 0.9
         size_y = size * 0.9, size * 0.1, size * 0.9
         size_z = size * 0.9, size * 0.9, size * 0.1
 
