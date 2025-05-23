@@ -30,16 +30,16 @@ class Rubik:
         size_x = size * 0.9, size * 0.1, size * 0.9
         size_y = size * 0.1, size * 0.9, size * 0.9
 
-        for x in range(1):
-            for y in range(1):
-                for z in range(1):
+        for x in range(3):
+            for y in range(3):
+                for z in range(3):
                     face_colors = [
-                        pr.BLACK if x != 0 else colors[0],
-                        pr.BLACK if x != 2 else colors[1],
-                        pr.BLACK if y != 0 else colors[2],
-                        pr.BLACK if y != 2 else colors[3],
-                        pr.BLACK if z != 0 else colors[4],
-                        pr.BLACK if z != 2 else colors[5],
+                        pr.BLACK if z != 2 else colors[0],
+                        pr.BLACK if z != 0 else colors[1],
+                        pr.BLACK if x != 2 else colors[2],
+                        pr.BLACK if x != 0 else colors[3],
+                        pr.BLACK if y != 2 else colors[4],
+                        pr.BLACK if y != 0 else colors[5],
                     ]
 
                     # Center
